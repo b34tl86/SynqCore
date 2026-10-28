@@ -1,0 +1,200 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 260" width="1200" height="260">
+  <defs>
+    <!-- Scanline texture -->
+    <pattern id="sl" x="0" y="0" width="1200" height="4" patternUnits="userSpaceOnUse">
+      <rect y="3" width="1200" height="1" fill="#FFFFFF" opacity="0.016"/>
+    </pattern>
+
+    <!-- Monitor grid fade: transparent left → opaque right -->
+    <linearGradient id="mf" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="44%" stop-color="black"/>
+      <stop offset="64%" stop-color="white"/>
+      <stop offset="100%" stop-color="white"/>
+    </linearGradient>
+    <mask id="gm">
+      <rect width="1200" height="260" fill="url(#mf)"/>
+    </mask>
+
+    <!-- Subtle right-edge fade-out so monitors blend into bg -->
+    <linearGradient id="re" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="85%" stop-color="white"/>
+      <stop offset="100%" stop-color="black"/>
+    </linearGradient>
+    <mask id="rm">
+      <rect width="1200" height="260" fill="url(#re)"/>
+    </mask>
+  </defs>
+
+  <!-- ── BACKGROUND ─────────────────────────────────── -->
+  <rect width="1200" height="260" fill="#07090C"/>
+
+  <!-- Subtle left-to-right gradient warmth -->
+  <rect width="1200" height="260" fill="url(#sl)"/>
+
+  <!-- ── MONITOR GRID (right half, double-masked) ──── -->
+  <g mask="url(#rm)">
+    <g mask="url(#gm)" opacity="0.22">
+
+      <!-- ROW 0  y=28 ─────────────────── -->
+      <!-- Col 0 x=668 :: dark/default -->
+      <rect x="668" y="28" width="82" height="50" rx="3" fill="#141820" stroke="#1C2430" stroke-width="1"/>
+      <rect x="672" y="32" width="74" height="38" rx="2" fill="#181E28"/>
+      <rect x="672" y="62" width="38" height="3" rx="1.5" fill="#222C3A"/>
+
+      <!-- Col 1 x=760 :: GREEN active (promo) -->
+      <rect x="760" y="28" width="82" height="50" rx="3" fill="#0B1A10" stroke="#1C3020" stroke-width="1"/>
+      <rect x="764" y="32" width="74" height="38" rx="2" fill="#0E2216"/>
+      <rect x="764" y="32" width="74" height="2" rx="1" fill="#00D478" opacity="0.55"/>
+      <rect x="766" y="38" width="52" height="2" rx="1" fill="#00D478" opacity="0.22"/>
+      <rect x="766" y="44" width="36" height="2" rx="1" fill="#00D478" opacity="0.16"/>
+      <rect x="766" y="50" width="60" height="2" rx="1" fill="#00D478" opacity="0.20"/>
+      <rect x="764" y="62" width="50" height="3" rx="1.5" fill="#00D478" opacity="0.35"/>
+
+      <!-- Col 2 x=852 :: video -->
+      <rect x="852" y="28" width="82" height="50" rx="3" fill="#141820" stroke="#1C2430" stroke-width="1"/>
+      <rect x="856" y="32" width="74" height="38" rx="2" fill="#161C26"/>
+      <polygon points="874,43 874,57 886,50" fill="#FFFFFF" opacity="0.18"/>
+      <rect x="856" y="62" width="74" height="3" rx="1.5" fill="#1C2430"/>
+
+      <!-- Col 3 x=944 :: BLUE (stream/web) -->
+      <rect x="944" y="28" width="82" height="50" rx="3" fill="#080E1E" stroke="#0A1830" stroke-width="1"/>
+      <rect x="948" y="32" width="74" height="38" rx="2" fill="#0A1228"/>
+      <rect x="948" y="32" width="74" height="2" rx="1" fill="#3B9AFF" opacity="0.45"/>
+      <rect x="950" y="54" width="70" height="2" rx="1" fill="#3B9AFF" opacity="0.18"/>
+      <rect x="948" y="62" width="54" height="3" rx="1.5" fill="#3B9AFF" opacity="0.30"/>
+
+      <!-- Col 4 x=1036 :: GREEN active -->
+      <rect x="1036" y="28" width="82" height="50" rx="3" fill="#0B1A10" stroke="#1C3020" stroke-width="1"/>
+      <rect x="1040" y="32" width="74" height="38" rx="2" fill="#0E2216"/>
+      <rect x="1040" y="32" width="74" height="2" rx="1" fill="#00D478" opacity="0.55"/>
+      <rect x="1040" y="62" width="42" height="3" rx="1.5" fill="#00D478" opacity="0.30"/>
+
+      <!-- Col 5 x=1128 :: dark -->
+      <rect x="1128" y="28" width="82" height="50" rx="3" fill="#141820" stroke="#1C2430" stroke-width="1"/>
+      <rect x="1132" y="32" width="74" height="38" rx="2" fill="#181E28"/>
+
+      <!-- ROW 1  y=96 ─────────────────── -->
+      <!-- Col 0 x=668 :: GREEN -->
+      <rect x="668" y="96" width="82" height="50" rx="3" fill="#0B1A10" stroke="#1C3020" stroke-width="1"/>
+      <rect x="672" y="100" width="74" height="38" rx="2" fill="#0E2216"/>
+      <rect x="672" y="130" width="64" height="3" rx="1.5" fill="#00D478" opacity="0.35"/>
+
+      <!-- Col 1 x=760 :: dark/web lines -->
+      <rect x="760" y="96" width="82" height="50" rx="3" fill="#141820" stroke="#1C2430" stroke-width="1"/>
+      <rect x="764" y="100" width="74" height="38" rx="2" fill="#181E28"/>
+      <rect x="766" y="108" width="70" height="1" rx="0.5" fill="#252E3E"/>
+      <rect x="766" y="113" width="52" height="1" rx="0.5" fill="#252E3E"/>
+      <rect x="766" y="118" width="64" height="1" rx="0.5" fill="#252E3E"/>
+      <rect x="766" y="123" width="40" height="1" rx="0.5" fill="#252E3E"/>
+      <rect x="764" y="130" width="28" height="3" rx="1.5" fill="#222C3A"/>
+
+      <!-- Col 2 x=852 :: BLUE stream -->
+      <rect x="852" y="96" width="82" height="50" rx="3" fill="#080E1E" stroke="#0A1830" stroke-width="1"/>
+      <rect x="856" y="100" width="74" height="38" rx="2" fill="#0A1228"/>
+      <rect x="856" y="100" width="74" height="2" rx="1" fill="#3B9AFF" opacity="0.45"/>
+      <polygon points="874,111 874,125 886,118" fill="#3B9AFF" opacity="0.30"/>
+      <rect x="856" y="130" width="44" height="3" rx="1.5" fill="#3B9AFF" opacity="0.25"/>
+
+      <!-- Col 3 x=944 :: GREEN active -->
+      <rect x="944" y="96" width="82" height="50" rx="3" fill="#0B1A10" stroke="#1C3020" stroke-width="1"/>
+      <rect x="948" y="100" width="74" height="38" rx="2" fill="#0E2216"/>
+      <rect x="948" y="100" width="74" height="2" rx="1" fill="#00D478" opacity="0.55"/>
+      <rect x="950" y="108" width="48" height="2" rx="1" fill="#00D478" opacity="0.20"/>
+      <rect x="950" y="114" width="34" height="2" rx="1" fill="#00D478" opacity="0.15"/>
+      <rect x="950" y="120" width="56" height="2" rx="1" fill="#00D478" opacity="0.18"/>
+      <rect x="948" y="130" width="60" height="3" rx="1.5" fill="#00D478" opacity="0.30"/>
+
+      <!-- Col 4 x=1036 :: video -->
+      <rect x="1036" y="96" width="82" height="50" rx="3" fill="#141820" stroke="#1C2430" stroke-width="1"/>
+      <rect x="1040" y="100" width="74" height="38" rx="2" fill="#161C26"/>
+      <polygon points="1059,111 1059,125 1071,118" fill="#FFFFFF" opacity="0.18"/>
+      <rect x="1040" y="130" width="74" height="3" rx="1.5" fill="#1C2430"/>
+
+      <!-- Col 5 x=1128 :: dark -->
+      <rect x="1128" y="96" width="82" height="50" rx="3" fill="#0B1A10" stroke="#1C3020" stroke-width="1"/>
+      <rect x="1132" y="100" width="74" height="38" rx="2" fill="#0E2216"/>
+      <rect x="1134" y="122" width="60" height="2" rx="1" fill="#00D478" opacity="0.18"/>
+      <rect x="1134" y="128" width="44" height="2" rx="1" fill="#00D478" opacity="0.13"/>
+
+      <!-- ROW 2  y=164 ─────────────────── -->
+      <!-- Col 0 x=668 :: dark -->
+      <rect x="668" y="164" width="82" height="50" rx="3" fill="#141820" stroke="#1C2430" stroke-width="1"/>
+      <rect x="672" y="168" width="74" height="38" rx="2" fill="#181E28"/>
+      <rect x="672" y="198" width="46" height="3" rx="1.5" fill="#222C3A"/>
+
+      <!-- Col 1 x=760 :: BLUE -->
+      <rect x="760" y="164" width="82" height="50" rx="3" fill="#080E1E" stroke="#0A1830" stroke-width="1"/>
+      <rect x="764" y="168" width="74" height="38" rx="2" fill="#0A1228"/>
+      <rect x="764" y="198" width="74" height="3" rx="1.5" fill="#3B9AFF" opacity="0.28"/>
+
+      <!-- Col 2 x=852 :: GREEN active -->
+      <rect x="852" y="164" width="82" height="50" rx="3" fill="#0B1A10" stroke="#1C3020" stroke-width="1"/>
+      <rect x="856" y="168" width="74" height="38" rx="2" fill="#0E2216"/>
+      <rect x="856" y="164" width="82" height="2" rx="1" fill="#00D478" opacity="0.55"/>
+      <rect x="856" y="198" width="54" height="3" rx="1.5" fill="#00D478" opacity="0.35"/>
+
+      <!-- Col 3 x=944 :: ALERT (orange) -->
+      <rect x="944" y="164" width="82" height="50" rx="3" fill="#1A0C08" stroke="#2A1208" stroke-width="1"/>
+      <rect x="948" y="168" width="74" height="38" rx="2" fill="#220E08"/>
+      <rect x="944" y="164" width="82" height="2" rx="1" fill="#FF7040" opacity="0.55"/>
+      <polygon points="985,175 977,191 993,191" fill="#FF7040" opacity="0.32"/>
+      <rect x="960" y="195" width="26" height="2" rx="1" fill="#FF7040" opacity="0.25"/>
+      <rect x="948" y="198" width="74" height="3" rx="1.5" fill="#FF7040" opacity="0.22"/>
+
+      <!-- Col 4 x=1036 :: dark -->
+      <rect x="1036" y="164" width="82" height="50" rx="3" fill="#141820" stroke="#1C2430" stroke-width="1"/>
+      <rect x="1040" y="168" width="74" height="38" rx="2" fill="#181E28"/>
+
+      <!-- Col 5 x=1128 :: GREEN -->
+      <rect x="1128" y="164" width="82" height="50" rx="3" fill="#0B1A10" stroke="#1C3020" stroke-width="1"/>
+      <rect x="1132" y="168" width="74" height="38" rx="2" fill="#0E2216"/>
+      <rect x="1132" y="164" width="82" height="2" rx="1" fill="#00D478" opacity="0.45"/>
+      <rect x="1132" y="198" width="48" height="3" rx="1.5" fill="#00D478" opacity="0.30"/>
+
+    </g>
+  </g>
+
+  <!-- ── LEFT TEXT CONTENT ──────────────────────────── -->
+
+  <!-- Vertical green accent bar -->
+  <rect x="42" y="64" width="3" height="132" rx="1.5" fill="#00D478"/>
+
+  <!-- Dot at top of bar (live indicator) -->
+  <circle cx="43.5" cy="60" r="5.5" fill="#00D478"/>
+  <circle cx="43.5" cy="60" r="9" fill="#00D478" opacity="0.18"/>
+
+  <!-- Main headline: SYNQCORE -->
+  <text x="66" y="178"
+    font-family="Impact, 'Arial Black', 'Helvetica Neue', Arial, sans-serif"
+    font-size="110"
+    font-weight="900"
+    letter-spacing="4"
+    fill="#E4F0F8">SYNQ<tspan fill="#00D478">CORE</tspan></text>
+
+  <!-- Tagline -->
+  <text x="70" y="211"
+    font-family="'Arial Narrow', 'Helvetica Neue', Arial, sans-serif"
+    font-size="13"
+    letter-spacing="5.5"
+    fill="#647888">DIGITAL SIGNAGE · LOCAL-FIRST · FULL CONTROL · UAE &amp; GCC</text>
+
+  <!-- Version badge -->
+  <rect x="70" y="226" width="58" height="19" rx="9.5" fill="#081A12" stroke="#00D478" stroke-width="0.8" opacity="0.9"/>
+  <text x="99" y="239"
+    font-family="Arial, sans-serif"
+    font-size="10.5"
+    fill="#00D478"
+    text-anchor="middle"
+    letter-spacing="2">v 1.0</text>
+
+  <!-- TechTrust label -->
+  <text x="140" y="239"
+    font-family="Arial, sans-serif"
+    font-size="10.5"
+    fill="#3E5060"
+    letter-spacing="1.5">· TechTrust.ae</text>
+
+  <!-- Bottom rule -->
+  <rect x="0" y="258" width="1200" height="2" fill="#111820"/>
+  <rect x="42" y="256" width="220" height="4" rx="2" fill="#00D478" opacity="0.55"/>
+</svg>
