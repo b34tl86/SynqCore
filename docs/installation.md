@@ -2,15 +2,15 @@
 
 ## Download
 
-Download `SynqCore-Setup-v1.0.0.exe` from the [latest release](https://github.com/b34tl86/SynqCore/releases/latest). Each release also lists a `SHA256SUMS.txt` file. To confirm your download is intact, compare its hash with the one in that file:
+Download `SynqCore-Setup-v1.1.1.exe` from the [latest release](https://github.com/b34tl86/SynqCore/releases/latest). Each release also lists a `SHA256SUMS.txt` file. To confirm your download is intact, compare its hash with the one in that file:
 
 ```powershell
-Get-FileHash .\SynqCore-Setup-v1.0.0.exe -Algorithm SHA256
+Get-FileHash .\SynqCore-Setup-v1.1.1.exe -Algorithm SHA256
 ```
 
 ## Windows SmartScreen
 
-The installer is not yet signed with a commercial code-signing certificate, so Windows may show **"Windows protected your PC"**. Choose **More info**, check that the app name is `SynqCore-Setup-v1.0.0.exe`, then choose **Run anyway**.
+The installer is not yet signed with a commercial code-signing certificate, so Windows may show **"Windows protected your PC"**. Choose **More info**, check that the app name is `SynqCore-Setup-v1.1.1.exe`, then choose **Run anyway**.
 
 ## Install
 
@@ -25,13 +25,9 @@ The installer also adds a Windows Firewall rule so screens on your network can r
 
 ## First sign-in
 
-Sign in with username `admin`. On the first start, SynqCore creates a random password and saves it in:
+Sign in with username `admin` and password `admin`. Change the password straight away from the account menu, because anyone on your network who can reach port 8787 can try the default.
 
-```
-%LOCALAPPDATA%\SynqCore\data\admin-bootstrap.txt
-```
-
-Paste that path into File Explorer's address bar to open the folder. Sign in, then change the password from the account menu and delete `admin-bootstrap.txt`.
+If sign-in fails, the sign-in screen explains why, for example a wrong password, a missing MFA code, or a browser that blocks the sign-in cookie.
 
 ## The tray icon
 

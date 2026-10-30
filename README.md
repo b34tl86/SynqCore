@@ -68,6 +68,8 @@ Your media, schedules, and logs stay on your own hardware.
 | **🔐 Roles and MFA**<br>Admin, Manager, and Viewer roles. Multi-factor authentication per account. Sessions time out automatically. | **🎨 7 brand themes**<br>Studio Obsidian, Emerald, Ocean, Sunset, Violet, Crimson, or Custom, with your own logo and accent colors. | **📊 Proof of play**<br>Every impression is logged locally for compliance, auditing, and campaign reporting. |
 | **📡 Live screen sharing**<br>Share a monitor to one, several, or all displays with low latency, including system audio where the browser supports it. | **🔍 Network discovery**<br>Scan your local network for compatible devices and add them without typing IP addresses. | **📂 Direct file presentation**<br>Present PowerPoint, Word, Excel, PDF, images, video, and HTML directly. Office files convert through Microsoft Office or LibreOffice. |
 
+**🗜 Automatic video optimization** · Every uploaded video gets smaller copies in 720p and 1080p, plus 4K for 4K uploads, and each screen downloads only the size it needs.
+
 <br>
 
 ---
@@ -85,9 +87,9 @@ Your media, schedules, and logs stay on your own hardware.
 
 ## ⚡ Quick Start
 
-**1. Install.** Download `SynqCore-Setup-v1.0.0.exe` from the [latest release](https://github.com/b34tl86/SynqCore/releases/latest) and run it. If Windows SmartScreen appears, choose **More info → Run anyway** ([why](docs/installation.md#windows-smartscreen)).
+**1. Install.** Download `SynqCore-Setup-v1.1.1.exe` from the [latest release](https://github.com/b34tl86/SynqCore/releases/latest) and run it. If Windows SmartScreen appears, choose **More info → Run anyway** ([why](docs/installation.md#windows-smartscreen)).
 
-**2. Sign in.** SynqCore opens your dashboard at `http://localhost:8787`. Sign in as `admin` with the first-time password from [the installation guide](docs/installation.md#first-sign-in), then change it.
+**2. Sign in.** SynqCore opens your dashboard at `http://localhost:8787`. Sign in as `admin` with password `admin`, then change the password straight away ([details](docs/installation.md#first-sign-in)).
 
 **3. Pair a screen.** Go to **Screens → Add Screen**, then open the player address shown in the SynqCore tray menu on your display, for example `http://192.168.1.20:8787/player?code=ABC123`. Content goes live immediately. See [Pairing screens](docs/pairing-screens.md).
 
@@ -114,7 +116,8 @@ Your media, schedules, and logs stay on your own hardware.
 | &nbsp; | Version | Milestone |
 |:---:|:---:|:---|
 | ✅ | **v1.0** | Core CMS · Screen pairing · Multi-zone layouts · Emergency alerts · Tickers · Roles + MFA · 7 themes · Live sharing · Network discovery · Windows installer |
-| 🔄 | **v1.1** | Bulk operations · Player health dashboard · Proof-of-play CSV/PDF export · Dayparting · Arabic (RTL) support |
+| ✅ | **v1.1** | Automatic video optimization · Per-screen video resolution · Clearer sign-in messages |
+| 🔄 | **v1.2** | Bulk operations · Player health dashboard · Proof-of-play CSV/PDF export · Dayparting · Arabic (RTL) support |
 | 📅 | **v1.5** | REST API + webhooks · Template designer · Widget library (weather, prayer times, scores) · Conditional content rules |
 | 🔭 | **v2.0** | Multi-tenancy · Cloud hybrid option · Analytics dashboard · iOS/Android companion app |
 
